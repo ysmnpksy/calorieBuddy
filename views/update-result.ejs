@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+        <head>
+                <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+                <title>Calorie Buddy: Update Result</title>
+        </head>
+
+        <h1>Calorie Buddy</h1>
+
+        <ul class="nav">
+                <li><a href='./'>Home</a></li>
+                <li><a href='/about'>About</a></li>
+                <li><a href='/addfood'>Add Food</a></li>
+                <li><a href='/listfood'>List Food</a></li>
+                <li><a href='/login'>Login</a></li>
+                <li><a href='/register'>Register</a></li>
+                <li><a href='/searchfood'>Search Food</a></li>
+                <li><a href='/updatefood'>Update Food</a></li>
+                <li><a href='/api'>API</a></li>
+                <li><a href='/logout'>Logout</a></li>
+        </ul>
+
+        <body>
+                <h2>Update Result</h2>
+                <h3>Here is a list of all the food items that match your search:</h3>
+		<p>Note: This list only contains items that you have added. You cannot update items added by others.</p>
+
+                <div style="overflow-x:auto;">
+                        <table>
+                                <tr>
+                                        <th class="heading"><b>Name</b></th>
+                                        <th><b>Typical Values</b></th>
+                                        <th><b>Calories</b></th>
+                                        <th><b>Carbs</b></th>
+                                        <th><b>Fat</b></th>
+                                        <th><b>Protein</b></th>
+                                        <th><b>Salt</b></th>
+                                        <th><b>Sugar</b></th>
+					<th></th>
+					<th></th>	
+                                </tr>
+
+                                <% availablefood.forEach(function(food){ %>
+                                        <tr><form method="POST" action="/food-updated/<%= food._id %>">
+                                                <td><input class="tableInput" id="name" type="text" name="name" value="<%= food.name %>"/></td>
+                                                <td><input class="tableInput" id="typicalValues" type="number" name="typicalValues" value="<%= food.typicalValues %>"/>
+							<select name="unitTypicalValues" id="unitTypicalValues" value="<%= food.unitTypicalValues %>">
+								<option value="grams">Grams</option>
+								<option vaLue="kilograms">Kilograms</option>
+								<option value="ounces">Ounced</option>
+								<option value="tablespoon">Tablespoon</option>
+								<option value="cup">Cup</option>
+								<option value="millilitres">Millilitres</option>
+								<option value="litres">Litres</option>
+	    						</select>
+						</td>
+                                                <td><input class="tableInput" id="calories" type="number" name="calories" value="<%= food.calories %>"/> g</td>
+                                                <td><input class="tableInput" id="carbs" type="number" name="carbs" value="<%= food.carbs %>"/> g</td>
+                                                <td><input class="tableInput" id="fat" type="number" name="fat" value="<%= food.fat %>"/> g</td>
+                                                <td><input class="tableInput" id="protein" type="number" name="protein" value="<%= food.protein %>"/> g</td>
+                                                <td><input class="tableInput" id="salt" type="number" name="salt" value="<%= food.salt %>"/> g</td>
+                                                <td><input class="tableInput" id="sugar" type="number" name="sugar" value="<%= food.sugar %>"/> g</td>
+						<td><input type="submit" name="submit" id="update" value="Update"></td>
+						<td><input type="submit" name="submit" id="delete" value="Delete"></td>
+                                        </form></tr>
+                                <% }); %>
+                        </table>
+                </div>
+        </body>
+</html>
+

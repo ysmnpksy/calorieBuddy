@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+        <head>
+                <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+                <title>Calorie Buddy: Confirmation</title>
+        </head>
+
+        <h1>Calorie Buddy</h1>
+
+        <ul class="nav">
+                <li><a href='./'>Home</a></li>
+                <li><a href='/about'>About</a></li>
+                <li><a href='/addfood'>Add Food</a></li>
+                <li><a href='/listfood'>List Food</a></li>
+                <li><a href='/login'>Login</a></li>
+                <li><a href='/register'>Register</a></li>
+                <li><a href='/searchfood'>Search Food</a></li>
+                <li><a href='/updatefood'>Update Food</a></li>
+                <li><a href='/api'>API</a></li>
+                <li><a href='/logout'>Logout</a></li>
+        </ul>
+
+        <body>
+		<h2><%= messages[0] %></h2> 
+
+		<% for (var i = 1; i<messages.length; i++){ %>
+			<p><%= messages[i] %></p>
+		<% } %>		
+        </body>
+
+</html>

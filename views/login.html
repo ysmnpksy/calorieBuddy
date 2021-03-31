@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+        <title>Calorie Buddy: Login</title>
+    </head>
+    
+    <h1>Calorie Buddy</h1>
+
+    <ul class="nav">
+        <li><a href='./'>Home</a></li>
+        <li><a  href='/about'>About</a></li>
+        <li><a href='/addfood'>Add Food</a></li>
+        <li><a href='/listfood'>List Food</a></li>
+        <li><a class="active" href='/login'>Login</a></li>
+        <li><a href='/register'>Register</a></li>
+        <li><a href='/searchfood'>Search Food</a></li>
+        <li><a href='/updatefood'>Update Food</a></li>
+	<li><a href='/api'>API</a></li>
+	<li><a href='/logout'>Logout</a></li>
+    </ul>
+
+    <body>
+
+        <h2>Login</h2>
+	<p>Please fill this form to login:</p>
+	
+	<form method="POST" action="loggedin">
+		<label for="username">Username:</label>
+		<input id="username" type="text" name="username" value="username"/><br>
+
+		<label for="password">Password:</label>
+		<input id="password" type="text" name="password" value="password"/><br>
+
+		<input type="submit" value="Submit"/>
+	</form>
+    
+   </body>
+
+</html>

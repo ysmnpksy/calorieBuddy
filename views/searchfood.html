@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+        <title>Calorie Buddy: Search Food</title>
+    </head>
+    
+    <h1>Calorie Buddy</h1>
+
+    <ul class="nav">
+        <li><a href='./'>Home</a></li>
+        <li><a href='/about'>About</a></li>
+        <li><a href='/addfood'>Add Food</a></li>
+        <li><a href='/listfood'>List Food</a></li>
+        <li><a href='/login'>Login</a></li>
+        <li><a href='/register'>Register</a></li>
+        <li><a class="active" href='/searchfood'>Search Food</a></li>
+        <li><a href='/updatefood'>Update Food</a></li>
+	<li><a href='/api'>API</a></li>
+        <li><a href='/logout'>Logout</a></li>
+    </ul>
+
+    <body>
+
+        <h2>Search Food</h2>
+
+	<p>Enter the name of the food you want to search for here:</p>
+
+        <form action="/search-result" method="GET">
+            <input id="search-box" type="text" name="keyword" value="Default">
+            <input type="submit" value="OK" >
+        </form>
+        
+
+    </body>
+
+</html>

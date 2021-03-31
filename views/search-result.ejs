@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	<head>
+        	<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+        	<title>Calorie Buddy: Search Result</title>
+	</head>
+    
+	<h1>Calorie Buddy</h1>
+
+	<ul class="nav">
+        	<li><a href='./'>Home</a></li>
+        	<li><a href='/about'>About</a></li>
+       		<li><a href='/addfood'>Add Food</a></li>
+        	<li><a href='/listfood'>List Food</a></li>
+        	<li><a href='/login'>Login</a></li>
+        	<li><a href='/register'>Register</a></li>
+        	<li><a href='/searchfood'>Search Food</a></li>
+        	<li><a href='/updatefood'>Update Food</a></li>
+		<li><a href='/api'>API</a></li>
+        	<li><a href='/logout'>Logout</a></li>
+	</ul>
+	
+	<body>
+		<h2>Search Result</h2>
+		<h3>Here is a list of all the food items that match your search:</h3>
+        	
+		<div style="overflow-x:auto;">
+                	<table>
+                        	<tr>
+                                	<th><b>Name</b></th>
+                                	<th><b>Typical Values</b></th>
+                                	<th><b>Calories</b></th>
+                                	<th><b>Carbs</b></th>
+                                	<th><b>Fat</b></th>
+                                	<th><b>Protein</b></th>
+                                	<th><b>Salt</b></th>
+                                	<th><b>Sugar</b></th>
+                                	<th><b>Added By</b></th>
+                        	</tr>
+
+                        	<% availablefood.forEach(function(food){ %>
+                        		<tr>
+                                		<td><%= food.name %></td>
+                                		<td><%= food.typicalValues%> <%= food.unitTypicalValues %></td>
+                                		<td><%= food.calories %> <%= food.unitTypicalValues %></td>
+                                		<td><%= food.carbs %> <%= food.unitTypicalValues %></td>
+                                		<td><%= food.fat %> <%= food.unitTypicalValues %></td>
+                                		<td><%= food.protein %> <%= food.unitTypicalValues %></td>
+                                		<td><%= food.salt %> <%= food.unitTypicalValues %></td>
+                                		<td><%= food.sugar %> <%= food.unitTypicalValues %></td>
+                                		<td><%= food.username %></td>
+					</tr>
+				<% }); %>
+                	</table>
+		</div>
+	</body>
+</html>
+
