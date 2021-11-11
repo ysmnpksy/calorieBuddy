@@ -113,14 +113,11 @@ The list is sorted in alphabetical order by name.
 R9B: The food items are listed in a tabular format instead of a simple list.
 If the page is resized the form will have a horizonatal scroll bar so none of the input boxes are too small to be used. 
 
-R9C: ///////////////////////////////////////
-
 The implementation for this can be found at views/listfood.ejs and routes/main.js line <> onwards.
 
 ## API
 This API displays all food items stored in the 'food' collection in JSON format.
 The API can be easily accessed from the navigation bar on the app. 
-///////////////////////////////////////
 
 ## Form Validation
 I've included server-side validation on the add food page:
